@@ -39,6 +39,7 @@
             this.lbUsername = new System.Windows.Forms.Label();
             this.lbStartMessage = new System.Windows.Forms.Label();
             this.btnChange = new System.Windows.Forms.Button();
+            this.tbReceivedMessages = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -148,11 +149,20 @@
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
+            // tbReceivedMessages
+            // 
+            this.tbReceivedMessages.Location = new System.Drawing.Point(415, 88);
+            this.tbReceivedMessages.Multiline = true;
+            this.tbReceivedMessages.Name = "tbReceivedMessages";
+            this.tbReceivedMessages.Size = new System.Drawing.Size(261, 105);
+            this.tbReceivedMessages.TabIndex = 17;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbReceivedMessages);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.lbStartMessage);
             this.Controls.Add(this.lbUsername);
@@ -183,6 +193,7 @@
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Label lbStartMessage;
         private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.TextBox tbReceivedMessages;
     }
 }
 

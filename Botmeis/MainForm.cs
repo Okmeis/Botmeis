@@ -27,8 +27,7 @@ namespace Botmeis {
             }
         }
 
-        private void btnChange_Click(object sender, EventArgs e)
-        {
+        private void btnChange_Click(object sender, EventArgs e) {
             irc.joinRoom(tbChannel.Text.ToLower());
             irc.sendChatMessage(tbStartMessage.Text);
         }
@@ -65,10 +64,26 @@ namespace Botmeis {
         /*-----------------------------BackgroundWorker----------------------------*/
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e) {
-
+            try {
+                message = irc.readMessage();
+            }
+            catch (Exception ex) {
+                ircConnect();
+            }
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+            
+            tbReceivedMessages.Text = message;
+
+            if (message.Equals(null)) {
+                message = "";
+            }
+            else {
+                if (message == "PING :tmi.twitch.tv") {
+                    irc.sendIrcMessage("PONG :tmi.twitch.tv");
+                }
+            }
 
         }
 
