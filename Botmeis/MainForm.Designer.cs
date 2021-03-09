@@ -38,6 +38,7 @@
             this.lbOAuth = new System.Windows.Forms.Label();
             this.lbUsername = new System.Windows.Forms.Label();
             this.lbStartMessage = new System.Windows.Forms.Label();
+            this.btnChange = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -48,7 +49,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(309, 171);
+            this.btnStart.Location = new System.Drawing.Point(305, 145);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -137,11 +138,22 @@
             this.lbStartMessage.Text = "Startmessage";
             this.lbStartMessage.Click += new System.EventHandler(this.lbStartMessage_Click);
             // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(305, 170);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(75, 23);
+            this.btnChange.TabIndex = 16;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.lbStartMessage);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.lbOAuth);
@@ -170,6 +182,7 @@
         private System.Windows.Forms.Label lbOAuth;
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Label lbStartMessage;
+        private System.Windows.Forms.Button btnChange;
     }
 }
 
