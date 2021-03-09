@@ -58,7 +58,7 @@
             // 
             // tbChannel
             // 
-            this.tbChannel.Location = new System.Drawing.Point(85, 93);
+            this.tbChannel.Location = new System.Drawing.Point(85, 119);
             this.tbChannel.Name = "tbChannel";
             this.tbChannel.Size = new System.Drawing.Size(100, 20);
             this.tbChannel.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(85, 119);
+            this.tbUsername.Location = new System.Drawing.Point(85, 93);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(100, 20);
             this.tbUsername.TabIndex = 2;
